@@ -13,6 +13,8 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "dev:web": "turbo dev --filter=web",
+    "dev:cms": "turbo dev --filter=cms",
     "lint": "turbo lint",
     "format": "turbo format",
     "test": "turbo test",
