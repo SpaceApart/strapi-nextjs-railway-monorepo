@@ -1,0 +1,42 @@
+{
+  "name": "strapi-nextjs-railway-monorepo",
+  "version": "1.0.0",
+  "description": "Production-ready Strapi v5 + Next.js 14 monorepo with Railway deployment",
+  "private": true,
+  "author": "Kuba",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.17.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.6",
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "turbo format",
+    "test": "turbo test",
+    "type-check": "turbo type-check",
+    "clean": "turbo clean",
+    "prepare": "husky install",
+    "commit": "cz"
+  },
+  "devDependencies": {
+    "turbo": "^1.13.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.2",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-conventional": "^18.6.2"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
