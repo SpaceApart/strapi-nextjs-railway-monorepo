@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import ApiStatus from "@/components/api-status";
 
 export default function HomePage() {
   return (
@@ -56,6 +57,7 @@ export default function HomePage() {
             <Input placeholder="Enter your email..." />
             <Button>Subscribe</Button>
           </div>
+          <ApiStatus />
         </div>
       </div>
     </main>
