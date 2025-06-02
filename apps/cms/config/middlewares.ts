@@ -1,4 +1,11 @@
-export default ({ env }) => [
+interface StrapiEnv {
+  (key: string, defaultValue?: string): string;
+  int(key: string, defaultValue?: number): number;
+  bool(key: string, defaultValue?: boolean): boolean;
+  array(key: string, defaultValue?: any[]): any[];
+}
+
+export default ({ env }: { env: StrapiEnv }) => [
   'strapi::logger',
   'strapi::errors',
   {
